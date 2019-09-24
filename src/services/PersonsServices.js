@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3002/api/persons'
+const baseUrl = 'https://phbook-backend.herokuapp.com/api/persons'
 
 // retrieves and returns all data from server 
 const getAll = () => {
