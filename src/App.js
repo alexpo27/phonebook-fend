@@ -29,7 +29,7 @@ const App = () => {
 
   // dinamically creates each list element containig persons' details
   const getList = () => {
-    return detailsToShow.map(person => <p key={person.name}>{person.name} {person.number} <button onClick={() => deleteEntry(person)}>Delete</button></p>)
+    return detailsToShow.map(person => <p key={person.id}>{person.name} {person.number} <button onClick={() => deleteEntry(person)}>Delete</button></p>)
   }
 
   // changes specific states when values are changed inside input fields
