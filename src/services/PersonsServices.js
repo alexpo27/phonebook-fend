@@ -21,9 +21,10 @@ const remove = id => {
 
 // replaces the object with 'id'(param)
 // with the `replaceObject'(param)
-const updateNumber = (id, replaceObject) => {
-    const request = axios.put(`${baseUrl}/${id}`, replaceObject)
+// TODO: fix this part. put request not working, error 404
+const updateNumber = (id, updatedObj) => {
+    const request = axios.put(`${baseUrl}/${id}`, updatedObj)
     return request.then(response => response.data)
 }
-
+ 
 export default { getAll, create, remove, updateNumber }

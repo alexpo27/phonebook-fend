@@ -61,8 +61,7 @@ const App = () => {
               },5000)
             })
             .catch(error => {
-              console.log(error)
-              setErrorMessage(`Operation failed, check the console to see a complete log of the error.`)
+              setErrorMessage(error.message)
               setTimeout(() => {
                 setErrorMessage('')
               },5000)
@@ -80,8 +79,7 @@ const App = () => {
             },5000)
           })
           .catch(error => {
-            console.log(error)
-            setErrorMessage(`Operation failed, check the console to see a complete log of the error.`)
+            setErrorMessage(error.response.data.error)
             setTimeout(() => {
               setErrorMessage('')
             },5000)
